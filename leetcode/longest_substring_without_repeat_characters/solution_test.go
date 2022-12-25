@@ -42,9 +42,17 @@ func TestCase5Success(t *testing.T) {
 	}
 }
 
-func TestCaseˊSuccess(t *testing.T) {
+func TestCase6Success(t *testing.T) {
 	got := lengthOfLongestSubstring("abba")
 	want := 2
+	if got != want {
+		t.Errorf("got %d, wanted %d", got, want)
+	}
+}
+
+func TestCase7Success(t *testing.T) {
+	got := lengthOfLongestSubstring(" ")
+	want := 1
 	if got != want {
 		t.Errorf("got %d, wanted %d", got, want)
 	}
