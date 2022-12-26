@@ -5,8 +5,9 @@ import "testing"
 func TestCase1Success(t *testing.T) {
 	got := longestPalindrome("babad")
 	want := "bab"
-	if got != want {
-		t.Errorf("%v != %v", got, want)
+	want2 := "aba"
+	if got != want && got != want2 {
+		t.Errorf("%v != %v or %v", got, want, want2)
 	}
 }
 
@@ -54,16 +55,18 @@ func TestCase6Success(t *testing.T) {
 func TestCase7Success(t *testing.T) {
 	got := longestPalindrome("ab")
 	want := "a"
-	if got != want {
-		t.Errorf("%v != %v", got, want)
+	want2 := "b"
+	if got != want && got != want2 {
+		t.Errorf("%v != %v or %v", got, want, want2)
 	}
 }
 
 func TestCase8Success(t *testing.T) {
 	got := longestPalindrome("ac")
 	want := "a"
-	if got != want {
-		t.Errorf("%v != %v", got, want)
+	want2 := "c"
+	if got != want && got != want2 {
+		t.Errorf("%v != %v or %v", got, want, want2)
 	}
 }
 
