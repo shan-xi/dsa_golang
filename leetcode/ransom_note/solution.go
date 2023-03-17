@@ -3,15 +3,16 @@ package main
 // 383. Ransom Note
 // https://leetcode.com/problems/ransom-note/?envType=study-plan&id=data-structure-i
 func canConstruct(ransomNote string, magazine string) bool {
-	counter := make([]int, 26)
-	for i := 0; i < len(magazine); i++ {
-		counter[magazine[i]-'a']++
+	countChars := make([]int, 128)
+	for _, c := range magazine {
+		countChars[c]++
 	}
-	for i := 0; i < len(ransomNote); i++ {
-		counter[ransomNote[i]-'a']--
-		if counter[ransomNote[i]-'a'] < 0 {
+	for _, c := range ransomNote {
+		if countChars[c] == 0 {
 			return false
 		}
+		countChars[c]--
 	}
 	return true
+
 }
