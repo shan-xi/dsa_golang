@@ -12,7 +12,7 @@ func isAnagram(s string, t string) bool {
 	}
 
 	for i := 0; i < len(t); i++ {
-		count[t[i]-'a']++
+		count[t[i]-'a']--
 	}
 
 	for i := 0; i < len(count); i++ {
@@ -21,5 +21,4 @@ func isAnagram(s string, t string) bool {
 		}
 	}
 	return true
-
 }
