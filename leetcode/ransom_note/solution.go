@@ -14,5 +14,4 @@ func canConstruct(ransomNote string, magazine string) bool {
 		countChars[c]--
 	}
 	return true
-
 }
