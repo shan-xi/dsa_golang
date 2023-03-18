@@ -1,3 +1,5 @@
 go 1.19
 
-use ./leetcode
+use ./leetcode 
+use ./leetcode/merge_two_sorted_lists
+use ./leetcode/common
