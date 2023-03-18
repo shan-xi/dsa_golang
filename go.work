@@ -3,3 +3,4 @@ go 1.19
 use ./leetcode 
 use ./leetcode/merge_two_sorted_lists
 use ./leetcode/common
+use ./leetcode/remove_linked_list_elements
