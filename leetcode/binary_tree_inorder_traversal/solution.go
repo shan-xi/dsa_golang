@@ -2,20 +2,20 @@ package binary_tree_inorder_traversal
 
 import c "leetcode/common"
 
+var result []int = []int{}
+
 // 94. Binary Tree Inorder Traversal
 func inorderTraversal(root *c.TreeNode) []int {
-	var result []int
-	var stack []*c.TreeNode
-	current := root
-	for current != nil || len(stack) > 0 {
-		for current != nil {
-			stack = append(stack, current)
-			current = current.Left
-		}
-		current = stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-		result = append(result, current.Val)
-		current = current.Right
-	}
+	result = []int{}
+	inOrder(root)
 	return result
+}
+
+func inOrder(root *c.TreeNode) {
+	if root == nil {
+		return
+	}
+	inOrder(root.Left)
+	result = append(result, root.Val)
+	inOrder(root.Right)
 }
