@@ -1,8 +1,14 @@
-go 1.19
+go 1.26.4
 
-use ./leetcode 
+use ./leetcode
+
 use ./leetcode/merge_two_sorted_lists
+
 use ./leetcode/common
+
 use ./leetcode/remove_linked_list_elements
 
-use ./interview
+use (
+	./interview
+	./new_leetcode/1_two_sum
+)
