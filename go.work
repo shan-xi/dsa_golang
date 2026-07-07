@@ -11,4 +11,6 @@ use ./leetcode/remove_linked_list_elements
 use (
 	./interview
 	./new_leetcode/1_two_sum
+	./new_leetcode/2395_find_subarrays_with_equal_sum
+	./new_leetcode/9_palindrome_number
 )
